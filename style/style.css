@@ -1,0 +1,160 @@
+/* Set the background color and font family */
+html,
+body {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+body {
+  background-color: #f8aab7;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  /* color: #0e2db8 */
+}
+
+/* Style the proposal container */
+#proposal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  text-align: center;
+}
+
+/* Style the anime boy image */
+#anime-boy {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  mix-blend-mode: color-burn;
+  transition: 1.5s;
+}
+
+#fireworks{
+    position: absolute;
+width: 100%;
+opacity: 0.7;
+  z-index: 5;
+  display: none;
+  transition: 1.5s;
+}
+
+#message{
+    display: inline-block;
+}
+/* Style the proposal question */
+#proposal-question {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Style the button container */
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the yes button */
+#yes-button {
+  background-color: #ff4d88;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the yes button hover effect */
+#yes-button:hover {
+  background-color: #ff3366;
+}
+
+/* Style the no button */
+#no-button {
+  background-color: #ff4d88;
+  color: #fff;
+  border: 2px solid #ff4d88;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* Style the no button hover effect */
+#no-button:hover {
+  background-color: #ff4d88;
+  color: #fff;
+  cursor: default;
+}
+
+/* Style the no button hover effect on mouse enter */
+#no-button:hover:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+/* Style the no button hover effect on mouse leave */
+#no-button:not(:hover):before {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for small screens */
+  #proposal-question {
+    font-size: 1.5rem;
+  }
+
+  #yes-button,
+  #no-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust styles for extra small screens */
+  #proposal-question {
+    font-size: 1.2rem;
+  }
+
+  #yes-button,
+  #no-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
