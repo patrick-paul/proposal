@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proposal</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script src="script/particles/particles.js"></script>
+  </head>
+  <body id="body">
+    <div id="proposal-container">
+      <div id="particles-js"></div>
+      <img id="fireworks" src="assert/fireworks.gif" alt="fireworks" />
+      <img id="anime-boy" src="assert/wait.gif" alt="Anime boy" />
+      <div id="message">
+        <h3 id="proposal-name">Dear <em id="name"></em></h3>
+      <h1 id="proposal-message"></h1>
+      </div>
+      <div id="button-container">
+        <button
+          id="yes-button"
+          onmouseenter="handleYesButtonHover()"
+          onmouseleave="handleYesButtonHoverExit()"
+          onclick="handleYesButtonClick()"
+        >
+          Yes
+        </button>
+        <button id="no-button" onmouseenter="handleNoButtonHover()">No</button>
+      </div>
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>
